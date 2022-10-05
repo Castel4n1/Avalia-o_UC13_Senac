@@ -23,7 +23,7 @@ namespace CadastroAlunos.Repository
             return await _context.Aluno.ToListAsync();
         }
 
-        public async Task<Aluno> GetAlunoById(int id)
+        public async Task<Aluno> GetAlunoById(int? id)
         {
             return await _context.Aluno.FirstOrDefaultAsync(c => c.Id == id);
         }
@@ -44,13 +44,13 @@ namespace CadastroAlunos.Repository
             if (aluno == null)
                 return 0;
 
-            //cliente.AtualizaDados(clienteAlterado.Nome, clienteAlterado.Nascimeto, clienteAlterado.Email);
+            aluno.AtualizarDados(alunoAlterado.Nome, alunoAlterado.Turma);
 
             _context.Entry(aluno).State = EntityState.Modified;
             return await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAluno(int id)
+        public async Task DeleteAluno(int? id)
         {
             var aluno = await _context.Aluno.FirstOrDefaultAsync(c => c.Id == id);
 
