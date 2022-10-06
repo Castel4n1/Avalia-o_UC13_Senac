@@ -16,7 +16,7 @@ namespace CadastroAlunos.Test
     public class AlunoControllerTest
     {
         Mock<IAlunoRepository> _repository;
-        //Aluno alunoValido;
+
 
         public AlunoControllerTest()
         {
