@@ -30,7 +30,7 @@ namespace CadastroAlunos.Test
         }
 
         [Theory]
-        [InlineData(6)]
+        [InlineData(5)]
         [InlineData(7)]
         public void VerificaAprovacao_SeMaiorOuIgual_A_Cinco(double nota)
         {
