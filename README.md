@@ -8,3 +8,6 @@ Avaliação Senac Começada no dia 29/09/2022
 # Operador = no metodo "VerificaAprovacao_SeMaiorOuIgual_A_Cinco"
 <br>
 # Método Construtor para facilitar o uso dos dados
+<br>
+#BadRequest Consertar para Retornar null
+<br>
