@@ -29,6 +29,10 @@ namespace CadastroAlunos.Controllers
         // GET: Aluno/Details/5
         public async Task<IActionResult> Details(int id)
         {
+            if(id < 1)
+            {
+                return BadRequest();
+            }
             var aluno = await _alunoRepository.GetAlunoById(id);
 
             if (aluno == null)

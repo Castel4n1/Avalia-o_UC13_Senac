@@ -31,7 +31,7 @@ namespace CadastroAlunos.Test
             //act
             var aluno = await controller.Index();
             //Assert
-            Assert.IsType<OkObjectResult>(aluno);
+            Assert.IsType<ViewResult>(aluno);
         }
 
         [Fact]
@@ -53,7 +53,7 @@ namespace CadastroAlunos.Test
             //arrange
             AlunoController controller = new AlunoController(_repository.Object);
             //act
-            var result = controller.Details(-1);
+            var result = await controller.Details(-1);
             //assert
             Assert.IsType<BadRequestResult>(result);
         }
@@ -121,8 +121,6 @@ namespace CadastroAlunos.Test
 
             //act
             var result = await controller.Create(aluno);
-
-
 
             //assert
             //assert
